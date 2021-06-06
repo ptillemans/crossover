@@ -1,8 +1,8 @@
 /*
  * File:           defines.h
  *
- * Created:        Sunday, May 30, 2021 3:14:54 PM
- * Description:    0_template IC default download data definitions.
+ * Created:        Saturday, June 5, 2021 9:17:05 PM
+ * Description:    crossover IC default download data definitions.
  *
  * This software is distributed in the hope that it will be useful,
  * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR

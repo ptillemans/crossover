@@ -1,8 +1,8 @@
 /*
- * File:           C:\Users\pti\Documents\SigmaDSP\examples\0_Template\SigmaStudio_project\Export\0_template_IC_1_PARAM.h
+ * File:           C:\Users\PeterTillemans\Projects\crossover\SigmaStudio_project\Export\crossover_IC_2_PARAM.h
  *
- * Created:        Sunday, May 30, 2021 3:14:54 PM
- * Description:    0_template:IC 1 parameter RAM definitions.
+ * Created:        Saturday, June 5, 2021 9:17:05 PM
+ * Description:    crossover:IC 2 parameter RAM definitions.
  *
  * This software is distributed in the hope that it will be useful,
  * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
@@ -16,8 +16,8 @@
  *
  * Copyright ©2021 Analog Devices, Inc. All rights reserved.
  */
-#ifndef __0_TEMPLATE_IC_1_PARAM_H__
-#define __0_TEMPLATE_IC_1_PARAM_H__
+#ifndef __CROSSOVER_IC_2_PARAM_H__
+#define __CROSSOVER_IC_2_PARAM_H__
 
 
 #endif

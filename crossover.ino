@@ -29,25 +29,50 @@ SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 48000.00f /*,12*/);
 // The second parameter is the EEPROM i2c address, which is defined in the parameter file
 // The third parameter is the EEPROM size in kilobits (kb)
 // An optional fourth parameter is the pin to toggle while writing content to EEPROM
-//DSPEEPROM ee(Wire, EEPROM_I2C_ADDRESS, 256, LED_BUILTIN);
+DSPEEPROM ee(Wire, EEPROM_I2C_ADDRESS, 256, LED_BUILTIN);
 
+byte ping(byte address) {
+  Serial.print(F("testing address 0x"));
+  Serial.println(address, HEX);
+  Wire.beginTransmission(address);
+  byte error = Wire.endTransmission();
+  if (error == 0) {
+    Serial.print(F("Device found at address 0x"));
+    Serial.println(address,HEX);
+  } else if (error==4) {
+    Serial.print(F("Unknown error at address 0x"));
+    if (address < 16) {
+      Serial.print("0");
+    }
+    Serial.println(address,HEX);
+  }
+  return error;
+}
 
 void setup() 
-{  
+{
+  byte error;
+
+  Wire.begin();
   Serial.begin(9600);
   Serial.println(F("SigmaDSP 0_Template example\n"));
 
   dsp.begin();
-  //ee.begin();
+  ee.begin();
 
   delay(2000);
 
   
-  Serial.println(F("Pinging i2c lines...\n0 -> deveice is present\n2 -> device is not present"));
+  Serial.println(F("Pinging i2c lines...\n0 -> device is present\n2 -> device is not present"));
   Serial.print(F("DSP response: "));
-  Serial.println(dsp.ping());
-  //Serial.print(F("EEPROM ping: "));
-  //Serial.println(ee.ping());
+  error = dsp.ping();
+
+  Serial.print(error, HEX);
+  Serial.println(".");
+
+  Serial.print(F("EEPROM response: "));
+  error = ee.ping();
+  Serial.println(error);
   
  
   // Use this step if no EEPROM is present
