@@ -1,12 +1,8 @@
 /**********************************************|
-| SigmaDSP library                             |
-| https://github.com/MCUdude/SigmaDSP          |
+| Crossover project                            |
+| https://github.com/ptillemans/crossover      |
 |                                              |
-| 0_Template.ino                               |
-| This example is ment to be used as a         |
-| template for your own projects. It provide   |
-| no functionality other than connecting the   |
-| two analog inputs directly to output 0 and 1 |
+| crossover.ino                                |
 |**********************************************/
 
 // Include Wire and SigmaDSP library
